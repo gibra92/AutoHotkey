@@ -1,3 +1,4 @@
 # AutoHotkey
 Daily use tools
-This is for personal use.
+New on Autohotkey,
+only simple stuff.
