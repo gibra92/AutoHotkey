@@ -1,0 +1,38 @@
+;------------------------Daily use Script------------------------------------------------;
+
+;=================================;
+;      Launch Google Chrome       ;
+;=================================;
+ 
+#g::Run Chrome
+
+;=================================;
+;Puts current window always on top;
+;=================================;
+
+^SPACE::  Winset, Alwaysontop, , A
+
+;=================================;
+;     Resize current window       ;
+;=================================;
+
+#!u::ResizeWin(1210,500), , A
+
+;=================================;
+;  Move current window up & down  ;
+;=================================;
+
+#!y::WinMove, A, , 63, 0           ;Up
+#!i::WinMove, A, , 63, 510         ;Down
+
+ResizeWin(Width = 0,Height = 0)
+{
+  WinGetPos,X,Y,W,H,A
+  If %Width% = 0
+    Width := W
+
+  If %Height% = 0
+    Height := H
+
+  WinMove,A,,%X%,%Y%,%Width%,%Height%
+}
